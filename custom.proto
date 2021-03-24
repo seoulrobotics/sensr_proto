@@ -9,4 +9,5 @@ package sensr_proto;
 
 message CustomMessage {
   repeated PolygonBox field_of_regard = 1;
+  float bg_learning_progress = 101;
 }
