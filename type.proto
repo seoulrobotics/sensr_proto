@@ -67,4 +67,5 @@ message Object {
   bytes points = 101;                    // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
   History history = 102;
   Prediction prediction = 103;
+  repeated int32 zone_ids = 104;
 }
