@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
 import "sensr_proto/global_type.proto";
 import "sensr_proto/type.proto";
 import "sensr_proto/custom.proto";
