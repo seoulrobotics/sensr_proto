@@ -44,8 +44,13 @@ message PolygonBox {
   float max_z = 3;
 }
 
+message HistoryState {
+  Vector3 position = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
+
 message History {
-  repeated Vector3 positions = 1;
+  repeated HistoryState states = 1;
 }
 
 message Prediction {
