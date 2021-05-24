@@ -14,7 +14,7 @@ message ObjectShape {
 message ObjectHistory {
   google.protobuf.Timestamp timestamp = 1;
   int32 id = 2;
-  repeated HistoryState history_states = 3;
+  repeated History.State history_states = 3;
 }
 
 message ZoneConfigPlus {
