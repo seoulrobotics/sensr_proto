@@ -12,8 +12,9 @@ message ObjectShape {
 }
 
 message ObjectHistory {
-  int32 id = 1;
-  repeated History.State states = 2;
+  reserved 1, 3;  // Reserved by backward compatibility.
+  int32 id = 2;
+  repeated History.State states = 4;
 }
 
 message ZoneConfigPlus {

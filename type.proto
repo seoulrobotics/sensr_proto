@@ -50,7 +50,8 @@ message History {
     Vector3 position = 1;
     google.protobuf.Timestamp timestamp = 2;
   }
-  repeated State states = 1;
+  reserved 1; // Reserved by backward compatibility.
+  repeated State states = 2;
 }
 
 message Prediction {
