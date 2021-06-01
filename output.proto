@@ -41,7 +41,7 @@ message SystemHealth {
     STORAGE_SHORTAGE = 2;
     SLOWDOWN = 3;
     INTERNAL_ERROR = 4;
-  }  
+  }
   message Node {
     enum Status {
       NONE = 0;
@@ -52,6 +52,8 @@ message SystemHealth {
     enum SensorStatus {
       SENSOR_DEAD = 0;
       SENSOR_ALIVE = 1;
+      SENSOR_ERRONEOUS = 2;
+      SENSOR_TILTED = 3;
     }
     Status status = 1;
     map<string, SensorStatus> sensors = 3;
