@@ -54,6 +54,7 @@ message SystemHealth {
       SENSOR_ALIVE = 1;
       SENSOR_ERRONEOUS = 2;
       SENSOR_TILTED = 3;
+      SENSOR_SUSPENDED = 4;
     }
     Status status = 1;
     map<string, SensorStatus> sensors = 3;
