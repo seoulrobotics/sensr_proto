@@ -72,9 +72,9 @@ message ZoneConfig {
 
 message StreamMessage {
   repeated Object objects = 1;
+  google.protobuf.Timestamp first_cloud_arrival_timestamp = 2;
   repeated ZoneConfig zones = 101;
   SystemHealth health = 102;
-  google.protobuf.Timestamp cloud_arrival_timestamp = 103;
 }
 
 message EventMessage {
