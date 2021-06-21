@@ -7,7 +7,12 @@ option cc_enable_arenas = true;
 
 package sensr_proto;
 
+message VehicleOrientedFieldsOfRegard {
+  int32 object_id = 1;
+  repeated PolygonBox field_of_regard = 2;
+}
+
 message CustomMessage {
-  repeated PolygonBox field_of_regard = 1;
+  repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 1;
   float bg_learning_progress = 101;
 }
