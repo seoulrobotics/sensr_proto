@@ -48,6 +48,7 @@ message SystemHealth {
       OK = 1;
       ROS_ERROR = 2;
       LOST_CONNECTION = 3;
+      INVALID_GPU_CONFIGURATION = 4;
     }
     enum SensorStatus {
       SENSOR_DEAD = 0;
