@@ -80,7 +80,7 @@ message ProfilingResult {
   message Characteristic {
     oneof member_oneof {
       int64 integer_number = 1;
-      float decimal_number = 2;
+      double decimal_number = 2;
       string text = 3;
     }
   }
