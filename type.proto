@@ -77,7 +77,7 @@ message Object {
 }
 
 message ProfilingResult {
-  message Charateristic {
+  message Characteristic {
     oneof member_oneof {
       uint64 size = 1;
       float decimal = 2;
@@ -86,5 +86,5 @@ message ProfilingResult {
   }
   map<string, uint64> processing_times = 1;
   map<string, uint64> mem_usages = 2;
-  map<string, Charateristic> charateristics = 101;
+  map<string, Characteristic> characteristics = 101;
 }
