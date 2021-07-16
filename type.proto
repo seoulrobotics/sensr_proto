@@ -79,8 +79,8 @@ message Object {
 message ProfilingResult {
   message Characteristic {
     oneof member_oneof {
-      uint64 size = 1;
-      float decimal = 2;
+      int64 integer_number = 1;
+      float decimal_number = 2;
       string text = 3;
     }
   }
