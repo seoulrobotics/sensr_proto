@@ -26,8 +26,7 @@ message ProfilingResultSet {
 }
 
 message CustomMessage {
-  repeated PolygonBox field_of_regard = 1 [deprecated = true];
-  repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 2;
+  repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 1;
   float bg_learning_progress = 101;
   ReplayInfo replay = 102;
   RecordingInfo record = 103;
