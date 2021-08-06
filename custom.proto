@@ -7,7 +7,29 @@ option cc_enable_arenas = true;
 
 package sensr_proto;
 
+message ReplayInfo {
+  int32 current_index = 1;
+}
+
+message RecordingInfo {
+  float saving_progress = 1;
+}
+
+message VehicleOrientedFieldsOfRegard {
+  int32 object_id = 1;
+  repeated PolygonBox field_of_regard = 2;
+}
+
+message ProfilingResultSet {
+  sensr_proto.ProfilingResult master_node = 1;
+  map<string, sensr_proto.ProfilingResult> algo_nodes = 2;
+}
+
 message CustomMessage {
+  //repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 1; // Temporary disable
   repeated PolygonBox field_of_regard = 1;
   float bg_learning_progress = 101;
+  ReplayInfo replay = 102;
+  RecordingInfo record = 103;
+  ProfilingResultSet profiling = 104;
 }

@@ -41,17 +41,22 @@ message SystemHealth {
     STORAGE_SHORTAGE = 2;
     SLOWDOWN = 3;
     INTERNAL_ERROR = 4;
-  }  
+  }
   message Node {
     enum Status {
       NONE = 0;
       OK = 1;
       ROS_ERROR = 2;
       LOST_CONNECTION = 3;
+      INVALID_GPU_CONFIGURATION = 4;
+      NETWORK_LATENCY = 5;
     }
     enum SensorStatus {
       SENSOR_DEAD = 0;
       SENSOR_ALIVE = 1;
+      SENSOR_ERRONEOUS = 2;
+      SENSOR_TILTED = 3;
+      SENSOR_SUSPENDED = 4;
     }
     Status status = 1;
     map<string, SensorStatus> sensors = 3;
@@ -69,6 +74,7 @@ message ZoneConfig {
 
 message StreamMessage {
   repeated Object objects = 1;
+  google.protobuf.Timestamp first_cloud_arrival_timestamp = 2;
   repeated ZoneConfig zones = 101;
   SystemHealth health = 102;
 }
