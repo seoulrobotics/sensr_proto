@@ -30,6 +30,7 @@ enum TrackingStatus {
   TRACKING = 3; // Stable tracking
   DRIFTING = 4; // Short term prediction when tracking is lost in TRACKING status
   EXPIRED = 5; // Expired tracking
+  MAX = 6;
 };
 
 
