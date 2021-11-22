@@ -77,6 +77,7 @@ message StreamMessage {
   google.protobuf.Timestamp first_cloud_arrival_timestamp = 2;
   repeated ZoneConfig zones = 101;
   SystemHealth health = 102;
+  repeated Object static_objects = 103;
 }
 
 message EventMessage {
