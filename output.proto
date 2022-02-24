@@ -51,6 +51,7 @@ message SystemHealth {
       INVALID_GPU_CONFIGURATION = 4;
       NETWORK_LATENCY = 5;
       INVALID_CONFIG = 6;
+      INITIALIZATION_ERROR = 7;
     }
     enum SensorStatus {
       SENSOR_DEAD = 0;
