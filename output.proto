@@ -41,6 +41,7 @@ message SystemHealth {
     STORAGE_SHORTAGE = 2;
     SLOWDOWN = 3;
     INTERNAL_ERROR = 4;
+    OUTPUT_BUFFER_OVERFLOW = 5;
   }
   message Node {
     enum Status {
