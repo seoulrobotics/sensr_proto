@@ -65,6 +65,7 @@ message Prediction {
 }
 
 message Object {
+  reserved 7;
   int32 id = 1;
   LabelType label = 2;
   float confidence = 3;
