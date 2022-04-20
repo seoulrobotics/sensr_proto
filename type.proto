@@ -15,7 +15,8 @@ enum LabelType {
   LABEL_CYCLIST = 3;
   LABEL_MISC = 4;
   LABEL_GROUND = 5;
-  LABEL_MAX = 6;
+  LABEL_GATE = 6;
+  LABEL_MAX = 7;
 }
 
 enum ZoneType {
