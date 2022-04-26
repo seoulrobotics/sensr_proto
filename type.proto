@@ -21,6 +21,7 @@ enum ZoneType {
   ZONE_TYPE_NONE = 0;
   ZONE_TYPE_EVENT = 1;
   ZONE_TYPE_EXCLUSION = 2;
+  ZONE_TYPE_REFLECTION = 3;
 }
 
 enum TrackingStatus {
