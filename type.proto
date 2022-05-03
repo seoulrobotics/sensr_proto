@@ -74,6 +74,7 @@ message Object {
   TrackingStatus tracking_status = 6;
   google.protobuf.Timestamp timestamp = 7;
   float yaw_rate = 8;
+  bool retro_reflective = 9;
   bytes points = 101;                    // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
   History history = 102;
   Prediction prediction = 103;
