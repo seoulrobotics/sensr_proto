@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 import "sensr_proto/global_type.proto";
 
@@ -14,13 +15,17 @@ enum LabelType {
   LABEL_CYCLIST = 3;
   LABEL_MISC = 4;
   LABEL_GROUND = 5;
-  LABEL_MAX = 6;
+  LABEL_GATE = 6;
+  LABEL_MAX = 7;
 }
 
 enum ZoneType {
   ZONE_TYPE_NONE = 0;
   ZONE_TYPE_EVENT = 1;
   ZONE_TYPE_EXCLUSION = 2;
+  ZONE_TYPE_REFLECTION = 3;
+  ZONE_TYPE_GATE = 4;
+  ZONE_TYPE_STATIC = 5;
 }
 
 enum TrackingStatus {
@@ -64,12 +69,16 @@ message Prediction {
 }
 
 message Object {
+  reserved 7;
   int32 id = 1;
   LabelType label = 2;
   float confidence = 3;
   BoundingBox bbox = 4;
   Vector3 velocity = 5;
   TrackingStatus tracking_status = 6;
+  float yaw_rate = 8;
+  google.protobuf.Duration time_offset = 9;
+  bool retro_reflective = 10;
   bytes points = 101;                    // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
   History history = 102;
   Prediction prediction = 103;
