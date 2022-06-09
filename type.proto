@@ -79,10 +79,12 @@ message Object {
   float yaw_rate = 8;
   google.protobuf.Duration time_offset = 9;
   bool retro_reflective = 10;
-  bytes points = 101;                    // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
+  bytes points = 101;           // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
   History history = 102;
   Prediction prediction = 103;
   repeated int32 zone_ids = 104;
+  bytes intensities = 105;      // Data type of intensities is float(4bytes). When you parsing this data, please be aware of this.
+
 }
 
 message ProfilingResult {
