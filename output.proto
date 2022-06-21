@@ -54,6 +54,7 @@ message SystemHealth {
       INVALID_CONFIG = 6;
       INPUT_NOT_AVAILABLE = 7;
       INITIALIZATION_ERROR = 8;
+      VERSION_MISMATCH = 9;
     }
     enum SensorStatus {
       SENSOR_DEAD = 0;
