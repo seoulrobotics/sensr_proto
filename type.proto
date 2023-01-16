@@ -78,7 +78,6 @@ message Object {
   float yaw_rate = 8;
   bool retro_reflective = 10;
   google.protobuf.Timestamp last_observed_timestamp = 11;
-  bool is_static = 12;
   bytes points = 101;           // Data type of points is Vector3f(12bytes). When you parsing this data, please be aware of this.
   History history = 102;
   Prediction prediction = 103;

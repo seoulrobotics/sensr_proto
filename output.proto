@@ -78,13 +78,13 @@ message ZoneConfig {
 }
 
 message StreamMessage {
-  reserved 103;
   repeated Object objects = 1;
   bool has_objects = 3;
   google.protobuf.Timestamp first_cloud_arrival_timestamp = 2;
   repeated ZoneConfig zones = 101;
   bool has_zones = 104;
   SystemHealth health = 102;
+  repeated Object static_objects = 103;
 }
 
 message EventMessage {
