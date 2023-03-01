@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+import "sensr_proto/type.proto";
+import "sensr_proto/global_type.proto";
+import "google/protobuf/timestamp.proto";
+
+package sensr_proto;
+
+message MacgyverObject {
+  int32 id = 1;
+  LabelType label = 2;
+  float confidence = 3;
+  BoundingBox bbox = 4;
+  Vector3 velocity = 5;
+  TrackingStatus tracking_status = 6;
+  repeated string zone_ids = 104;
+}
+
+message MacgyverObjects {
+  repeated MacgyverObject objects = 1;
+}
+
+message MacgyverZones {
+  repeated MacgyverZoneConfig zones = 1;
+}
+
+message MacgyverZoneConfig {
+  string uuid = 1;
+  repeated float zone_shape = 2;
+}
+
+message MacgyverStream {
+  google.protobuf.Timestamp timestamp = 1;
+  MacgyverObjects objects = 2;
+  MacgyverZones zone_configs = 3;
+}
+
