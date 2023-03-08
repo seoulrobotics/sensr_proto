@@ -6,6 +6,13 @@ import "google/protobuf/timestamp.proto";
 
 package sensr_proto;
 
+
+enum MacgyverEventType {
+  INTERNAL_ZONE_ENTRY = 0;
+  INTERNAL_ZONE_EXIT = 1;
+  ILLEGAL_STOP = 2;
+}
+
 message MacgyverObject {
   int32 id = 1;
   LabelType label = 2;
