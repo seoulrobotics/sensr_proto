@@ -15,6 +15,7 @@ enum MacgyverEventType {
   PEDESTRIAN_CROSSING = 4;
   PEDESTRIAN_IN_ZONE = 5;
   ILLEGAL_UTURN = 6;
+  NEAR_MISS = 7;
 }
 
 message MacgyverObject {
