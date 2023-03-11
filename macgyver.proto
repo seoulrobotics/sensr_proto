@@ -14,6 +14,7 @@ enum MacgyverEventType {
   JAYWALK = 3;
   PEDESTRIAN_CROSSING = 4;
   PEDESTRIAN_IN_ZONE = 5;
+  ILLEGAL_UTURN = 6;
 }
 
 message MacgyverObject {
@@ -23,6 +24,7 @@ message MacgyverObject {
   BoundingBox bbox = 4;
   Vector3 velocity = 5;
   TrackingStatus tracking_status = 6;
+  Prediction prediction  = 7;
   repeated string zone_ids = 104;
 }
 
