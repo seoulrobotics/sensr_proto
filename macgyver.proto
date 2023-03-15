@@ -6,6 +6,12 @@ import "google/protobuf/timestamp.proto";
 
 package sensr_proto;
 
+enum MacgyverEventStage {
+  EVENT_STARTED = 0;
+  EVENT_ON_PROGRESS = 1;
+  EVENT_FINISHED = 2;
+}
+
 
 enum MacgyverEventType {
   INTERNAL_ZONE_ENTRY = 0;
