@@ -15,13 +15,12 @@ enum MacgyverEventStage {
 
 enum MacgyverEventType {
   INTERNAL_ZONE_ENTRY = 0;
-  INTERNAL_ZONE_EXIT = 1;
-  ILLEGAL_STOP = 2;
-  JAYWALK = 3;
-  PEDESTRIAN_CROSSING = 4;
-  PEDESTRIAN_IN_ZONE = 5;
-  ILLEGAL_UTURN = 6;
-  NEAR_MISS = 7;
+  ILLEGAL_STOP = 1;
+  JAYWALK = 2;
+  PEDESTRIAN_CROSSING = 3;
+  PEDESTRIAN_IN_ZONE = 4;
+  ILLEGAL_UTURN = 5;
+  NEAR_MISS = 6;
 }
 
 message MacgyverObject {
@@ -45,7 +44,7 @@ message MacgyverZones {
 
 message MacgyverZoneConfig {
   string uuid = 1;
-  repeated float zone_shape = 2;
+  repeated float shape = 2;
 }
 
 message MacgyverStream {
