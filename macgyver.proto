@@ -31,6 +31,7 @@ message MacgyverObject {
   Vector3 velocity = 5;
   TrackingStatus tracking_status = 6;
   Prediction prediction  = 7;
+  History history = 8;
   repeated string zone_ids = 104;
 }
 
