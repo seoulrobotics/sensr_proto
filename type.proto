@@ -25,6 +25,7 @@ enum ZoneType {
   ZONE_TYPE_REFLECTION = 3;
   ZONE_TYPE_GATE = 4;
   ZONE_TYPE_STATIC = 5;
+  ZONE_TYPE_MAP_EXCLUSION = 6;
 }
 
 enum TrackingStatus {
