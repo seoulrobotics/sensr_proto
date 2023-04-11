@@ -25,6 +25,6 @@ message CustomMessage {
   reserved 1;
   repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 2;
   float bg_learning_progress = 101;
-  RecordingInfo record = 103;
-  ProfilingResultSet profiling = 104;
+  RecordingInfo record = 102;
+  ProfilingResultSet profiling = 103;
 }
