@@ -45,6 +45,7 @@ message SystemHealth {
   }
   message Node {
     enum Status {
+      reserved 7;
       NONE = 0;
       OK = 1;
       ROS_ERROR = 2;
@@ -52,9 +53,9 @@ message SystemHealth {
       INVALID_GPU_CONFIGURATION = 4;
       NETWORK_LATENCY = 5;
       INVALID_CONFIG = 6;
-      INPUT_NOT_AVAILABLE = 7;
       INITIALIZATION_ERROR = 8;
       VERSION_MISMATCH = 9;
+      EMPTY_ROSBAG_PLAY = 10;
     }
     enum SensorStatus {
       SENSOR_DEAD = 0;
