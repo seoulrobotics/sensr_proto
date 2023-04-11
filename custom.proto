@@ -7,10 +7,6 @@ option cc_enable_arenas = true;
 
 package sensr_proto;
 
-message ReplayInfo {
-  int32 current_index = 1;
-}
-
 message RecordingInfo {
   float saving_progress = 1;
 }
@@ -29,7 +25,6 @@ message CustomMessage {
   reserved 1;
   repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 2;
   float bg_learning_progress = 101;
-  ReplayInfo replay = 102;
   RecordingInfo record = 103;
   ProfilingResultSet profiling = 104;
 }
