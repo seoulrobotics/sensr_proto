@@ -23,6 +23,7 @@ enum MacgyverEventType {
   NEAR_MISS = 6;
   OVERSPEED = 7;
   WRONG_WAY = 8;
+  TRAFFIC_JAM = 9;
 }
 
 message MacgyverObject {
