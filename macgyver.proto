@@ -10,8 +10,28 @@ enum MacgyverEventStage {
   EVENT_STARTED = 0;
   EVENT_ON_PROGRESS = 1;
   EVENT_FINISHED = 2;
+  EVENT_ONCE = 3;
 }
 
+enum MacgyverSensrStatus {
+  SENSR_OK = 0;
+  SENSR_NO_CONNECTION = 1;
+  SENSR_NOT_IN_RUNTIME = 2;
+  SENSR_INTERNAL_ERROR = 3;
+}
+
+enum MacgyverAlgoStatus {
+  ALGO_OK = 0;
+  ALGO_NO_CONNECTION = 1;
+  ALGO_INTERNAL_ERROR = 2;
+}
+
+enum MacgyverSensorStatus {
+  SENSOR_OK = 0;
+  SENSOR_DEAD = 1;
+  SENSOR_ERROR = 2;
+  SENSOR_TILT = 3;
+}
 
 enum MacgyverEventType {
   INTERNAL_ZONE_ENTRY = 0;
@@ -36,6 +56,7 @@ message MacgyverObject {
   TrackingStatus tracking_status = 6;
   Prediction prediction  = 7;
   History history = 8;
+  string custom_type = 9;
   repeated string zone_ids = 104;
 }
 
