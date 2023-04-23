@@ -22,7 +22,7 @@ enum MacgyverSensrStatus {
 }
 
 enum MacgyverAlgoStatus {
-  ALGO_NONE = 0
+  ALGO_NONE = 0;
   ALGO_OK = 1;
   ALGO_NO_CONNECTION = 2;
   ALGO_INTERNAL_ERROR = 3;
