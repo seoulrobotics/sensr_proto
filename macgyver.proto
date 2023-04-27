@@ -14,23 +14,26 @@ enum MacgyverEventStage {
 }
 
 enum MacgyverSensrStatus {
-  SENSR_OK = 0;
-  SENSR_NO_CONNECTION = 1;
-  SENSR_NOT_IN_RUNTIME = 2;
-  SENSR_INTERNAL_ERROR = 3;
+  SENSR_NONE = 0;
+  SENSR_OK = 1;
+  SENSR_NO_CONNECTION = 2;
+  SENSR_NOT_IN_RUNTIME = 3;
+  SENSR_INTERNAL_ERROR = 4;
 }
 
 enum MacgyverAlgoStatus {
-  ALGO_OK = 0;
-  ALGO_NO_CONNECTION = 1;
-  ALGO_INTERNAL_ERROR = 2;
+  ALGO_NONE = 0;
+  ALGO_OK = 1;
+  ALGO_NO_CONNECTION = 2;
+  ALGO_INTERNAL_ERROR = 3;
 }
 
 enum MacgyverSensorStatus {
-  SENSOR_OK = 0;
-  SENSOR_DEAD = 1;
-  SENSOR_ERROR = 2;
-  SENSOR_TILT = 3;
+  SENSOR_NONE = 0;
+  SENSOR_OK = 1;
+  SENSOR_DEAD = 2;
+  SENSOR_ERROR = 3;
+  SENSOR_TILT = 4;
 }
 
 enum MacgyverEventType {
@@ -45,6 +48,8 @@ enum MacgyverEventType {
   WRONG_WAY = 8;
   TRAFFIC_JAM = 9;
   LOSING = 10;
+  QUEUE = 11;
+  ACCIDENT = 12;
 }
 
 enum MacgyverModelType {
