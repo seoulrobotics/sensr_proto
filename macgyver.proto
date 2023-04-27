@@ -47,6 +47,10 @@ enum MacgyverEventType {
   LOSING = 10;
 }
 
+enum MacgyverModelType {
+  CROSSWALK = 0;
+}
+
 message MacgyverObject {
   int32 id = 1;
   LabelType label = 2;
