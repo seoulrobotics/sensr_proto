@@ -45,10 +45,10 @@ enum MacgyverEventType {
   ILLEGAL_UTURN = 5;
   NEAR_MISS = 6;
   OVERSPEED = 7;
-  WRONG_WAY = 8;
+  WRONG_WAY_DRIVING = 8;
   TRAFFIC_JAM = 9;
   LOSING = 10;
-  QUEUE = 11;
+  QUEUEING = 11;
   ACCIDENT = 12;
 }
 
