@@ -53,6 +53,7 @@ enum MacgyverEventType {
 }
 
 enum MacgyverModelType {
+  CUSTOM = 0;
   CROSSWALK = 1;
   LANE = 2;
 }
