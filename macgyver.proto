@@ -53,7 +53,8 @@ enum MacgyverEventType {
 }
 
 enum MacgyverModelType {
-  CROSSWALK = 0;
+  CROSSWALK = 1;
+  LANE = 2;
 }
 
 message MacgyverObject {
