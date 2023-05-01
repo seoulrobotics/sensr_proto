@@ -56,6 +56,7 @@ enum MacgyverModelType {
   CUSTOM = 0;
   CROSSWALK = 1;
   LANE = 2;
+  BUILDING = 3;
 }
 
 message MacgyverObject {
