@@ -71,6 +71,13 @@ message SystemHealth {
   map<string, Node> nodes = 2;
 }
 
+message OnlineRecalibrationEvent {
+  google.protobuf.Timestamp timestamp = 1;
+  string topic = 2;
+  Vector3 translation = 3;
+  Vector3 axis_rotation = 4;
+}
+
 message ZoneConfig {
   int32 id = 1;
   string name = 2;
@@ -92,6 +99,7 @@ message EventMessage {
   repeated ZoneEvent zone = 1;
   repeated LosingEvent losing = 2;
   SystemHealth health = 3;
+  repeated OnlineRecalibrationEvent online_recalibration = 4;
 }
 
 // Actual message using in SENSR SDK
