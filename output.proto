@@ -67,7 +67,7 @@ message SystemHealth {
     message SensorInfo {
       string topic = 1;
       string sensor_name = 2;
-      SensorStatus Status = 3;
+      SensorStatus status = 3;
     }
     Status status = 1;
     map<string, SensorInfo> sensors = 3;
