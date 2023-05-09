@@ -70,7 +70,7 @@ message SystemHealth {
       string sensor_name = 3;
     }
     Status status = 1;
-    map<string, SensorInfo> sensors = 3;
+    map<string, SensorInfo> sensors = 4;
   }
   Status master = 1;
   map<string, Node> nodes = 2;
