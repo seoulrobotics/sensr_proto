@@ -12,3 +12,10 @@ message Vector3 {
   float y = 2;
   float z = 3;
 }
+
+message Quaternion {
+  float qw = 1;
+  float qx = 2;
+  float qy = 3;
+  float qz = 4;
+}
