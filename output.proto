@@ -80,7 +80,7 @@ message OnlineRecalibrationEvent {
   google.protobuf.Timestamp timestamp = 1;
   string topic = 2;
   Vector3 translation = 3;
-  Vector3 axis_rotation = 4;
+  Quaternion rotation = 4;
 }
 
 message ZoneConfig {
