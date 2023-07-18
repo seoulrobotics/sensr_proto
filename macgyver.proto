@@ -13,6 +13,12 @@ enum MacgyverEventStage {
   EVENT_ONCE = 3;
 }
 
+enum MacgyverStatus {
+  MACGYVER_NONE = 0;
+  MACGYVER_OK = 1;
+  MACGYVER_NOT_LICENSED = 2;
+}
+
 enum MacgyverSensrStatus {
   SENSR_NONE = 0;
   SENSR_OK = 1;
