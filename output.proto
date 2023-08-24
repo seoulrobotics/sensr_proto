@@ -64,6 +64,7 @@ message SystemHealth {
       SENSOR_ERRONEOUS = 2;
       SENSOR_TILTED = 3;
       SENSOR_SUSPENDED = 4;
+      SENSOR_ADVERSE_WEATHER = 5;
     }
     message SensorInfo {
       SensorStatus status = 1;
