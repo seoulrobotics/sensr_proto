@@ -72,6 +72,7 @@ message SystemHealth {
     }
     Status status = 1;
     map<string, SensorInfo> sensors = 4;
+    map<string, Node> edge_nodes = 5;
   }
   Status master = 1;
   map<string, Node> nodes = 2;
