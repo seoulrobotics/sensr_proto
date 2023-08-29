@@ -72,7 +72,7 @@ message SystemHealth {
     }
     message EdgeNodeInfo {
       Status status = 1;
-      map<string, SensorInfo> sensors = 4;
+      map<string, SensorInfo> sensors = 2;
     }
     Status status = 1;
     map<string, SensorInfo> sensors = 4;
