@@ -21,6 +21,11 @@ message ProfilingResultSet {
   map<string, sensr_proto.ProfilingResult> algo_nodes = 2;
 }
 
+enum Stage {
+  STAGE_NONE = 0;
+  STAGE_DRIVING = 1;
+};
+
 message CustomMessage {
   reserved 1;
   repeated VehicleOrientedFieldsOfRegard vehicle_oriented_fields_of_regard = 2;
