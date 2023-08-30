@@ -71,8 +71,13 @@ message SystemHealth {
       string topic = 2;
       string sensor_name = 3;
     }
+    message EdgeNodeInfo {
+      Status status = 1;
+      map<string, SensorInfo> sensors = 2;
+    }
     Status status = 1;
     map<string, SensorInfo> sensors = 4;
+    map<string, EdgeNodeInfo> edges = 5;
   }
   Status master = 1;
   map<string, Node> nodes = 2;
