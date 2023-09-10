@@ -58,6 +58,7 @@ enum MacgyverEventType {
   LOSING = 10;
   QUEUEING = 11;
   ACCIDENT = 12;
+  CUSTOM = 1000;
 }
 
 enum MacgyverModelType {
