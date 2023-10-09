@@ -23,7 +23,7 @@ message ProfilingResultSet {
 
 enum Stage {
   STAGE_NONE = 0;
-  STAGE_DRIVING = 1;
+  STAGE_CONTROLLED = 1;
 };
 
 message CustomMessage {
