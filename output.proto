@@ -65,17 +65,13 @@ message SystemHealth {
       SENSOR_TILTED = 3;
       SENSOR_SUSPENDED = 4;
     }
-    message SensorInfo {
-      SensorStatus status = 1;
-      string topic = 2;
-      string sensor_name = 3;
-    }
     message EdgeNodeInfo {
       Status status = 1;
-      map<string, SensorInfo> sensors = 2;
+      map<string, SensorStatus> sensors = 2;
     }
     Status status = 1;
-    map<string, SensorInfo> sensors = 4;
+    map<string, SensorStatus> sensors = 3;
+    reserved 4;
     map<string, EdgeNodeInfo> edges = 5;
   }
   Status master = 1;
