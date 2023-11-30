@@ -101,3 +101,43 @@ message MacgyverStream {
   MacgyverZones zone_configs = 3;
 }
 
+enum MacgyverDashboardType {
+  DASHBOARD_TYPE_NONE = 0;
+  DASHBOARD_TYPE_FREE = 1;
+  DASHBOARD_TYPE_GRID = 2;
+}
+
+enum MacgyverChartType {
+  CHART_TYPE_NONE = 0;
+  CHART_TYPE_PIE = 1;
+  CHART_TYPE_BAR = 2;
+  CHART_TYPE_SCATTER = 3;
+}
+
+enum MacgyverChartGroup {
+  GROUP_NONE = 0;
+  GROUP_MINUTE = 1;
+  GROUP_HOUR = 2;
+  GROUP_DAY = 3;
+  GROUP_WEEK = 4;
+  GROUP_MONTH = 5;
+}
+
+enum MacgyverBarChartDataType {
+  BARCHART_DATA_TYPE_NONE = 0;
+  BARCHART_DATA_TYPE_OBJECT_COUNT = 1;
+  BARCHART_DATA_TYPE_OBJECT_SPEED = 2;
+  BARCHART_DATA_TYPE_EVENT_COUNT = 3;
+}
+
+enum MacgyverPieChartDataType {
+  PIECHART_DATA_TYPE_NONE = 0;
+  PIECHART_DATA_TYPE_OBJECT_COUNT=1;
+  PIECHART_DATA_TYPE_EVENT_COUNT=2;
+}
+
+enum MacgyverScatterChartDataType {
+  SCATTER_CHART_DATA_TYPE_NONE = 0;
+  SCATTER_CHART_DATA_TYPE_EVENT = 1;
+}
+
