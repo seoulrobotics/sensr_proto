@@ -59,6 +59,7 @@ enum MacgyverEventType {
   QUEUEING = 11;
   ACCIDENT = 12;
   OVERHEIGHT = 13;
+  LOOP_DETECTION = 14;
 }
 
 enum MacgyverModelType {
