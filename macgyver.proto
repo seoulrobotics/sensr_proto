@@ -113,6 +113,7 @@ enum MacgyverChartType {
   CHART_TYPE_PIE = 1;
   CHART_TYPE_BAR = 2;
   CHART_TYPE_SCATTER = 3;
+  CHART_TYPE_LOGGER = 4;
 }
 
 enum MacgyverChartGroup {
@@ -142,3 +143,7 @@ enum MacgyverScatterChartDataType {
   SCATTER_CHART_DATA_TYPE_EVENT = 1;
 }
 
+enum MacgyverLoggerChartDataType {
+  LOGGER_CHART_DATA_TYPE_NONE = 0;
+  LOGGER_CHART_DATA_TYPE_EVENT = 1;
+}
