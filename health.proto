@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "sensr_proto/macgyver.proto";
+
+option cc_enable_arenas = true;
+
+package sensr_proto;
+
+message SensorStatus {
+  string name = 1;
+  sensr_proto.MacgyverSensorStatus status = 2;
+}
+
+message AlgoStatus {
+  string name = 1;
+  sensr_proto.MacgyverAlgoStatus status = 2;
+  repeated sensr_proto.SensorStatus sensorStatuses = 3;
+}
+
+message Health {
+  string uuid = 1;
+  int64 lastCommunicationTime = 2;
+  sensr_proto.MacgyverSensrStatus sensr = 3;
+  repeated AlgoStatus algos = 4;
+  sensr_proto.MacgyverStatus macgyver = 5;
+}
