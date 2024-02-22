@@ -14,12 +14,12 @@ message SensorStatus {
 message AlgoStatus {
   string name = 1;
   sensr_proto.MacgyverAlgoStatus status = 2;
-  repeated sensr_proto.SensorStatus sensorStatuses = 3;
+  repeated sensr_proto.SensorStatus sensor_statuses = 3;
 }
 
 message Health {
   string uuid = 1;
-  int64 lastCommunicationTime = 2;
+  int64 last_communication_time = 2;
   sensr_proto.MacgyverSensrStatus sensr = 3;
   repeated AlgoStatus algos = 4;
   sensr_proto.MacgyverStatus macgyver = 5;
