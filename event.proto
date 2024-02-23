@@ -96,6 +96,17 @@ message WrongWayEventData {
   repeated double velocity = 4;
 }
 
+message ZoneIds {
+  string from = 1;
+  string to = 2;
+}
+
+message ZoneTransitEventData {
+  int32 objId = 1;
+  ZoneIds zoneIds = 2;
+  repeated double position = 3;
+}
+
 message RawEventData {
   int32 type = 1;
   oneof data {
@@ -112,11 +123,12 @@ message RawEventData {
     TrafficJamEventData traffic_jam = 12;
     WrongWayEventData wrong_way = 13;
     ZoneEventData zone_event = 14;
+    ZoneTransitEventData zone_transit = 15;
   };
-  MacgyverEventStage stage = 15;
-  google.protobuf.Timestamp timestamp = 16;
-  string uuid = 17;
-  string hash = 18;
+  MacgyverEventStage stage = 16;
+  google.protobuf.Timestamp timestamp = 17;
+  string uuid = 18;
+  string hash = 19;
 }
 
 message ZoneEventData {
