@@ -124,6 +124,7 @@ message RawEventData {
     WrongWayEventData wrong_way = 13;
     ZoneEventData zone_event = 14;
     ZoneTransitEventData zone_transit = 15;
+    string custom = 1000;
   };
   MacgyverEventStage stage = 16;
   google.protobuf.Timestamp timestamp = 17;
