@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "sensr_proto/macgyver.proto";
+import "sensr_proto/type.proto";
+
+option cc_enable_arenas = true;
+
+package sensr_proto;
+
+message ObjectInfo {
+  int32 obj_id = 1;
+  repeated double position = 2;
+}
+
+message EventAccidentData {
+  string zone_id = 1;
+  repeated ObjectInfo objs = 2;
+}
+
+message IllegalStopEventData {
+  string zone_id = 1;
+  int32 obj_id = 2;
+  repeated double position = 3;
+}
+
+message LoopDetectionEventData {
+  string event_uuid = 1;
+  repeated float velocity = 2;
+  int32 obj_id = 3;
+  bool direction = 4;
+}
+
+message LosingEventData {
+  int32 obj_id = 1;
+  repeated string zone_ids = 2;
+  repeated double position = 3;
+  double yaw = 4;
+}
+
+message NearMissObject {
+  int32 obj_id = 1;
+  string zone_id = 2;
+  repeated double position = 3;
+  repeated double velocity = 4;
+}
+
+message NearMissEventData {
+  repeated NearMissObject objs = 1;
+}
+
+message ObjectOnZoneEventData {
+  int32 obj_id = 1;
+  string zone_id = 2;
+  repeated double position = 3;
+}
+
+message ObjectWaitingEventData {
+  int32 obj_id = 1;
+  string zone_id = 2;
+  repeated double position = 3;
+}
+
+message OverHeightEventData {
+  string zone_id = 1;
+  int32 obj_id = 2;
+  repeated double position = 3;
+  double height = 4;
+}
+
+message OverSpeedEventData {
+  string zone_id = 1;
+  int32 obj_id = 2;
+  repeated double position = 3;
+  repeated double velocity = 4;
+}
+
+message QueueFormingEventData {
+  string zone_id = 1;
+  int64 duration = 2;
+  repeated ObjectInfo objs = 3;
+  double length = 4;
+  double speed = 5;
+}
+
+message TrafficJamEventData {
+  string zone_id = 1;
+  double avg_velocity = 2;
+  double duration = 3;
+}
+
+message WrongWayEventData {
+  string zone_id = 1;
+  int32 obj_id = 2;
+  repeated double position = 3;
+  repeated double velocity = 4;
+}
+
+message RawEventData {
+  int32 type = 1;
+  oneof data {
+    EventAccidentData event_accident = 2;
+    IllegalStopEventData illegal_stop = 3;
+    LoopDetectionEventData loop_detection = 4;
+    LosingEventData losing = 5;
+    NearMissEventData near_miss = 6;
+    ObjectOnZoneEventData object_on_zone = 7;
+    ObjectWaitingEventData object_waiting = 8;
+    OverHeightEventData over_height = 9;
+    OverSpeedEventData over_speed = 10;
+    QueueFormingEventData queue_forming = 11;
+    TrafficJamEventData traffic_jam = 12;
+    WrongWayEventData wrong_way = 13;
+    ZoneEventData zone_event = 14;
+  };
+  MacgyverEventStage stage = 15;
+  google.protobuf.Timestamp timestamp = 16;
+  string uuid = 17;
+  string hash = 18;
+}
+
+message ZoneEventData {
+  string zone_id = 1;
+  int32 obj_id = 2;
+  repeated double position = 3;
+  LabelType label = 4;
+  string custom_type = 5;
+}
