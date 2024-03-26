@@ -61,7 +61,6 @@ enum MacgyverEventType {
   OVERHEIGHT = 13;
   LOOP_DETECTION = 14;
   PARKING = 15;
-  CUSTOM_EVENT = 1000;
 }
 
 enum MacgyverModelType {
