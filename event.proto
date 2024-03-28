@@ -83,12 +83,6 @@ message QueueFormingEventData {
   double speed = 5;
 }
 
-message ParkingEventData {
-  string zone_id = 1;
-  int32 obj_id = 2;
-  repeated double position = 3;
-}
-
 message TrafficJamEventData {
   string zone_id = 1;
   double avg_velocity = 2;
