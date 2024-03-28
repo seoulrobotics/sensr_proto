@@ -130,7 +130,6 @@ message RawEventData {
     WrongWayEventData wrong_way = 13;
     ZoneEventData zone_event = 14;
     ZoneTransitEventData zone_transit = 15;
-    ParkingEventData parking_event = 16;
     string custom = 999;
   };
   MacgyverEventStage stage = 1000;
