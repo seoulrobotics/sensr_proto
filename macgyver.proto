@@ -68,6 +68,7 @@ enum MacgyverModelType {
   LANE = 2;
   BUILDING = 3;
   GEOJSON = 4;
+  TEXT = 5;
 }
 
 message MacgyverObject {
