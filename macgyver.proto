@@ -83,7 +83,7 @@ message MacgyverObject {
   string custom_type = 9;
   google.protobuf.Timestamp valid_since = 10;
   repeated string zone_ids = 104;
-  repeated int32 zone_dwell_times = 105; // in miliseconds
+  repeated google.protobuf.Timestamp in_zone_since = 105; // in miliseconds
 }
 
 message MacgyverObjects {
