@@ -8,22 +8,22 @@ package sensr_proto;
 option cc_enable_arenas = true;
 
 enum LabelType {
+  reserved 6; // Reserved for former object label type gate.
   LABEL_NONE = 0;
   LABEL_CAR = 1;
   LABEL_PEDESTRIAN = 2;
   LABEL_CYCLIST = 3;
   LABEL_MISC = 4;
   LABEL_GROUND = 5;
-  LABEL_GATE = 6;
   LABEL_MAX = 7;
 }
 
 enum ZoneType {
+  reserved 4; // Reserved for former gate zone type.
   ZONE_TYPE_NONE = 0;
   ZONE_TYPE_EVENT = 1;
   ZONE_TYPE_EXCLUSION = 2;
   ZONE_TYPE_REFLECTION = 3;
-  ZONE_TYPE_GATE = 4;
   ZONE_TYPE_STATIC = 5;
   ZONE_TYPE_MAP_EXCLUSION = 6;
   ZONE_TYPE_BACKGROUND_REMOVAL = 7;
